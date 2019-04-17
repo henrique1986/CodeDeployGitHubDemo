@@ -1,6 +1,6 @@
 resource "aws_elb" "alb" {
   name 			            = "terraform-asg-example"
-  security_groups 	    = ["${aws_security_group.elb.id}"]
+  security_groups 	    = ["${aws_security_group.instance.id}"]
   availability_zones 	  = ["${data.aws_availability_zones.all.names}"]
   health_check {
     healthy_threshold 	= 2
