@@ -33,15 +33,13 @@ resource "aws_codedeploy_deployment_group" "hello-world" {
   deployment_group_name = "hello-world-group"
   service_role_arn      = "${aws_iam_role.hello-world.arn}"
   
-# It could be possible also to add Load balancer at this point
-  
     auto_rollback_configuration {
     enabled             = true
     events              = ["DEPLOYMENT_FAILURE"]
   }
 
   alarm_configuration {
-    alarms              = ["alarms-hello"]
+    alarms              = ["alarms-test"]
     enabled             = true
   }
 }
