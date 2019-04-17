@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "test_ubuntu" {
-  ami           = ""${lookup(var.AMIS, var.aws_region)}""
+  ami           = "${lookup(var.AMIS, var.aws_region)}"
   instance_type = "t2.micro"
   key_name      = "${var.test_key_pair_name}"
   
