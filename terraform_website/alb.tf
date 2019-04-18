@@ -1,5 +1,5 @@
 resource "aws_elb" "alb" {
-  availability_zones = ["${data.aws_availability_zones.all.names}"]
+  availability_zones    = ["${data.aws_availability_zones.all.names}"]
   name                  = "terraform-asg-example"
   security_groups       = ["${aws_security_group.instance.id}"]
   health_check {
