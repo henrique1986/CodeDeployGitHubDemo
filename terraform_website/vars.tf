@@ -8,7 +8,7 @@ variable "aws_region" {
   default = "us-east-1"
 }
 
-variable "AMIS" {
+variable "amis" {
   type = "map"
   default = {
     us-east-1 = "ami-13be557e"
